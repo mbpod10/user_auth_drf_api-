@@ -8,5 +8,7 @@ from profiles.models import Profile, ProfileStatus
 def create_profile(sender, instance, created, **kwargs):
     print("CREATED", created)
     if created:
-        profile = Profile.objects.create(user=instance)
-        ProfileStatus.objects.create(user_profile=profile)
+        Profile.objects.create(user=instance)
+
+        # profile = Profile.objects.create(user=instance)
+        # ProfileStatus.objects.create(user_profile=profile)
